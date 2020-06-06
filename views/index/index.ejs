@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="">Download Proxy Server</a>
+    </div>
+  </nav>
+  <div class="container" style="padding-top: 10px;">
+
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="inputURL" class="sr-only">Enter URL : (https://example.com)</label>
+        <input type="text" class="form-control" id="inputURL" placeholder="Enter URL : (https://example.com)">
+      </div>
+      <button type="submit" onclick="getDownload(); return false;" class="btn btn-primary mb-2">Download</button>
+  </form>
+
+  </div>
+
+  <div id="hack" class="container">
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script>
+  const getDownload = () => {
+
+    const requestURL = document.getElementById("inputURL").value;
+    const encodedURL = encodeURIComponent(requestURL).replace('%20','+');
+
+    document.getElementById("hack").innerHTML = '<iframe src="./download?url=' + encodedURL + '" frameBorder="0" border="0" marginwidth="0" marginheight="0" width="0px" height="0px"></iframe>';
+
+  }
+
+  </script>
+
+
+</body>
+
+</html>
+
