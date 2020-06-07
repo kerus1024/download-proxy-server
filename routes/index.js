@@ -1,7 +1,5 @@
 const express = require('express');
-const ejs = require('ejs');
 const cors = require('cors');
-
 const router = express.Router();
 
 

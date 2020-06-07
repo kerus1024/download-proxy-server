@@ -3,8 +3,6 @@ process.title = CONFIG.processTitle;
 
 const express = require('express');
 const routes = require('./routes/index');
-const path = require('path');
-const url = require('url');
 const bodyParser = require('body-parser');
 
 const app = express();
