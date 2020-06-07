@@ -4,6 +4,7 @@ process.title = CONFIG.processTitle;
 const express = require('express');
 const routes = require('./routes/index');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 const app = express();
 
